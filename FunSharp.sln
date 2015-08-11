@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FunSharp.Library", "src\FunSharp.Library.fsproj", "{D17DE6DC-A64B-4A97-B66B-21338289DFC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{8B1CDF39-DA8F-4841-8042-5A86638C12CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{A3310CF2-DBF6-4E2A-9B07-692C61C70AA4}"
+	ProjectSection(SolutionItems) = preProject
+		examples\Calculator.fsx = examples\Calculator.fsx
+		examples\Circle.fsx = examples\Circle.fsx
+		examples\Clock.fsx = examples\Clock.fsx
+		examples\FlappyBird.fsx = examples\FlappyBird.fsx
+		examples\FractalTree.fsx = examples\FractalTree.fsx
+		examples\Move.fsx = examples\Move.fsx
+		examples\Paint.fsx = examples\Paint.fsx
+		examples\Turtle.fsx = examples\Turtle.fsx
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "1942", "games\1942\1942.fsproj", "{BCF9F647-631E-4D78-A553-6FF49EAFF370}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tetris", "games\Tetris\Tetris.fsproj", "{CC3B753E-2218-4B5E-82F3-0F1A9480E2FA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Asteroids", "games\Asteroids\Asteroids.fsproj", "{03AE56AB-98BF-4F00-B175-F81491B61758}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TurtleDodger", "games\TurtleDodger\TurtleDodger.fsproj", "{7BE2A778-89F3-49EE-86B5-BD193B5C3BD6}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Paddle", "games\Paddle\Paddle.fsproj", "{1F86C6E6-7B14-4D76-A115-5D64C6F781A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D17DE6DC-A64B-4A97-B66B-21338289DFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17DE6DC-A64B-4A97-B66B-21338289DFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17DE6DC-A64B-4A97-B66B-21338289DFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17DE6DC-A64B-4A97-B66B-21338289DFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF9F647-631E-4D78-A553-6FF49EAFF370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF9F647-631E-4D78-A553-6FF49EAFF370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF9F647-631E-4D78-A553-6FF49EAFF370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF9F647-631E-4D78-A553-6FF49EAFF370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3B753E-2218-4B5E-82F3-0F1A9480E2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3B753E-2218-4B5E-82F3-0F1A9480E2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3B753E-2218-4B5E-82F3-0F1A9480E2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3B753E-2218-4B5E-82F3-0F1A9480E2FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03AE56AB-98BF-4F00-B175-F81491B61758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AE56AB-98BF-4F00-B175-F81491B61758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AE56AB-98BF-4F00-B175-F81491B61758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AE56AB-98BF-4F00-B175-F81491B61758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE2A778-89F3-49EE-86B5-BD193B5C3BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE2A778-89F3-49EE-86B5-BD193B5C3BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE2A778-89F3-49EE-86B5-BD193B5C3BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE2A778-89F3-49EE-86B5-BD193B5C3BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F86C6E6-7B14-4D76-A115-5D64C6F781A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F86C6E6-7B14-4D76-A115-5D64C6F781A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F86C6E6-7B14-4D76-A115-5D64C6F781A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F86C6E6-7B14-4D76-A115-5D64C6F781A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCF9F647-631E-4D78-A553-6FF49EAFF370} = {8B1CDF39-DA8F-4841-8042-5A86638C12CA}
+		{CC3B753E-2218-4B5E-82F3-0F1A9480E2FA} = {8B1CDF39-DA8F-4841-8042-5A86638C12CA}
+		{03AE56AB-98BF-4F00-B175-F81491B61758} = {8B1CDF39-DA8F-4841-8042-5A86638C12CA}
+		{7BE2A778-89F3-49EE-86B5-BD193B5C3BD6} = {8B1CDF39-DA8F-4841-8042-5A86638C12CA}
+		{1F86C6E6-7B14-4D76-A115-5D64C6F781A5} = {8B1CDF39-DA8F-4841-8042-5A86638C12CA}
+	EndGlobalSection
+EndGlobal
