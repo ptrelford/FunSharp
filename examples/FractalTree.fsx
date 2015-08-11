@@ -1,5 +1,6 @@
-﻿#r "../lib/Xwt.dll"
-#r "../src/bin/debug/FunSharp.Library.dll"
+﻿#I "../lib"
+#r "../lib/Xwt.dll"
+#r "../src/bin/Debug/FunSharp.Library.dll"
 
 open Library
 

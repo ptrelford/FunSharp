@@ -4,6 +4,7 @@ open System
 
 [<Sealed>]
 type GraphicsWindow private () =   
+   static let rnd = Random()
    static let mutable backgroundColor = Colors.White
    static let mutable width = 640
    static let mutable height = 480
@@ -99,7 +100,10 @@ type GraphicsWindow private () =
    static member MouseUp with set callback = My.App.MouseUp <- callback
    static member MouseMove with set callback = My.App.MouseMove <- callback
    static member GetColorFromRGB(r,g,b) = Color(255uy,byte r,byte g,byte b)
-   static member GetRandomColor() : Color = raise <| NotImplementedException()
+   static member GetRandomColor() : Color =
+      let bytes = [|1uy..3uy|]
+      rnd.NextBytes(bytes)
+      Color(255uy,bytes.[0],bytes.[1],bytes.[2])
    static member Show() = My.App.Show()
    static member Hide() = My.App.Hide()
    static member ShowMessage(text:string,title) = 
