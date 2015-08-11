@@ -20,11 +20,11 @@ FunSharp uses Mono's [Xwt](https://github.com/mono/xwt) and [Gtk#](http://www.mo
 open Library
 
 GraphicsWindow.PenColor <- Colors.Purple
-Turtle.X <- 150.0
-Turtle.Y <- 150.0
+Turtle.X <- 150.
+Turtle.Y <- 150.
 for i in 0..5..200 do
-   Turtle.Move(float i)
-   Turtle.Turn(90.0)
+   Turtle.Move(i)
+   Turtle.Turn(90)
 ```
 ![Alt text](http://trelford.com/FunSharp/Turtle_Example.png "Turtle Example")
 
