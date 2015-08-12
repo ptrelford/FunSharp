@@ -56,6 +56,8 @@ type GraphicsWindow private () =
       DrawTriangle(Triangle(x1,y1,x2,y2,x3,y3),pen()) |> draw
    static member DrawEllipse(x,y,width,height) =
       DrawEllipse(Ellipse(width,height),pen()) |> drawAt (x,y)
+   static member DrawEllipse(x:int,y:int,width:int,height:int) =
+      GraphicsWindow.DrawEllipse(float x, float y, float width, float height)
    static member DrawImage(imageName,x,y) =
       let imageRef =
          match ImageList.TryGetImage imageName with
