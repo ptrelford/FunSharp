@@ -35,3 +35,12 @@ for i in 0..5..200 do
 ![Alt text](http://trelford.com/FunSharp/Asteroids.png "Asteroids")
 
 ![Alt text](http://trelford.com/FunSharp/Tetris.png "Tetris")
+
+# Contributing
+
+Contributions are welcome, particularly new examples, bug fixes and filling out the API via the up-for-grabs issues.
+
+# Up-for-grabs
+
+- implement Shapes.Animate(x,y,duration)
+- implement Controls.AddMultilineTextBox(left,top)
