@@ -61,9 +61,13 @@ type Shapes private () =
                   My.App.Invoke(fun () -> My.App.Canvas.Invalidate())
                } |> Async.Start
                imageRef
-            else
-               use stream = Resource.GetStream(imageName)
-               ref (Xwt.Drawing.Image.FromStream(stream))
+            else             
+               let imageRef = ref null                 
+               My.App.Invoke(fun () ->
+                  use stream = Resource.GetStream(imageName)
+                  imageRef := Xwt.Drawing.Image.FromStream(stream)
+               )
+               imageRef
          ImageShape(imageRef) |> addShape name
       name
    static member AddText(text) =
