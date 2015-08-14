@@ -46,9 +46,9 @@ let mutable Hour = 0.
 let mutable Minute = 0.
 let mutable Second = 0.
 let setHands () = 
-   if (Clock.Hour + Clock.Minute/60. + Clock.Second/3600. <> Hour) then
+   if (float Clock.Hour + float Clock.Minute/60. + float Clock.Second/3600. <> Hour) then
      Shapes.Remove(HourHand)
-     Hour <- Clock.Hour + Clock.Minute/60. + Clock.Second/3600.
+     Hour <- float Clock.Hour + float Clock.Minute/60. + float Clock.Second/3600.
      GraphicsWindow.PenColor <- Colors.Black
      GraphicsWindow.PenWidth <- 3.
      HourHand <- 
@@ -57,9 +57,9 @@ let setHands () =
          MidY,
          MidX+Radius/2.*Math.Cos(Math.GetRadians(Hour*30.-90.)),
          MidY+Radius/2.*Math.Sin(Math.GetRadians(Hour*30.-90.)))   
-   if Clock.Minute <> Minute then
+   if float Clock.Minute <> Minute then
      Shapes.Remove(MinuteHand)
-     Minute <- Clock.Minute + Clock.Second/60.
+     Minute <- float Clock.Minute + float Clock.Second/60.
      GraphicsWindow.PenColor <- Colors.Blue
      GraphicsWindow.PenWidth <- 2.
      MinuteHand <- 
@@ -68,9 +68,9 @@ let setHands () =
          MidY,
          MidX+Radius/1.2*Math.Cos(Math.GetRadians(Minute*6.-90.)),
          MidY+Radius/1.2*Math.Sin(Math.GetRadians(Minute*6.-90.)))   
-   if Clock.Second <> Second then
+   if float Clock.Second <> Second then
      Shapes.Remove(SecondHand)
-     Second <- Clock.Second
+     Second <- float Clock.Second
      GraphicsWindow.PenColor <- Colors.Red
      GraphicsWindow.PenWidth <- 1.
      SecondHand <- 

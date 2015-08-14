@@ -3,7 +3,10 @@
 open System
 
 type Clock private () =
-   static member Hour = DateTime.Now.Hour |> float
-   static member Minute = DateTime.Now.Minute |> float
-   static member Second = DateTime.Now.Second |> float
+   static member Year = DateTime.Now.Year
+   static member Month = DateTime.Now.Month
+   static member Day = DateTime.Now.Day
+   static member Hour = DateTime.Now.Hour
+   static member Minute = DateTime.Now.Minute
+   static member Second = DateTime.Now.Second
    static member ElapsedMilliseconds = Environment.TickCount
