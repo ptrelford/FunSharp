@@ -8,6 +8,7 @@ FunSharp runs on Raspbian, Linux and Windows.
 ## Dependencies
 
 FunSharp uses Mono's [Xwt](https://github.com/mono/xwt) and [Gtk#](http://www.mono-project.com/docs/gui/gtksharp/) libraries.
+On Windows you will need to install [Gtk# for .Net](http://www.mono-project.com/download/#download-win)
 
 ## Building
 
@@ -36,11 +37,11 @@ for i in 0..5..200 do
 
 ![Alt text](http://trelford.com/FunSharp/Tetris.png "Tetris")
 
-# Contributing
+## Contributing
 
 Contributions are welcome, particularly new examples, bug fixes and filling out the API via the up-for-grabs issues.
 
-# Up-for-grabs
+## Up-for-grabs
 
 - implement Shapes.Animate(x,y,duration)
 - implement Controls.AddMultilineTextBox(left,top)
