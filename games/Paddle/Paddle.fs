@@ -21,7 +21,7 @@ GraphicsWindow.FontSize <- 14.0
 GraphicsWindow.MouseMove <- Callback(OnMouseMove)
 
 PrintScore()
-//Sound.PlayBellRingAndWait()
+Sound.PlayBellRing (*AndWait*) ()
 
 let mutable x = 0.0
 let mutable y = 0.0

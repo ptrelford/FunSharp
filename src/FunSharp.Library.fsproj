@@ -65,10 +65,16 @@
     <Compile Include="Timer.fs" />
     <Compile Include="Math.fs" />
     <Compile Include="Text.fs" />
+    <Compile Include="Sound.fs" />
     <Compile Include="Program.fs" />
     <Compile Include="Collections.fs" />
     <None Include="Colors.fsx" />
     <EmbeddedResource Include="turtle.png" />
+    <EmbeddedResource Include="Sounds\BeepBeep.wav"/>
+    <EmbeddedResource Include="Sounds\BellRing.wav"/>
+    <EmbeddedResource Include="Sounds\Chime.wav"/>
+    <EmbeddedResource Include="Sounds\Click.wav"/>
+    <EmbeddedResource Include="Sounds\Pause.wav"/>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
