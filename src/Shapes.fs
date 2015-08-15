@@ -48,8 +48,11 @@ type Shapes private () =
       Shapes.AddEllipse(float width,float height)
    static member AddImage(imageName) =
       let name = genName "Image"
-      match ImageList.TryGetImage(imageName) with
-      | Some image -> ImageShape(ref image) |> addShape name
+      match ImageList.TryGetImageBytes(imageName) with
+      | Some bytes ->
+         let stream = new System.IO.MemoryStream(bytes)
+         let image = Xwt.Drawing.Image.FromStream(stream)
+         ImageShape(ref image) |> addShape name
       | None ->
          let imageRef = 
             if imageName.StartsWith("http:") || imageName.StartsWith("https:") 

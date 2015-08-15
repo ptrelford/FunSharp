@@ -60,8 +60,10 @@ type GraphicsWindow private () =
       GraphicsWindow.DrawEllipse(float x, float y, float width, float height)
    static member DrawImage(imageName,x,y) =
       let imageRef =
-         match ImageList.TryGetImage imageName with
-         | Some image -> ref image
+         match ImageList.TryGetImageBytes imageName with
+         | Some bytes -> 
+            use memoryStream = new System.IO.MemoryStream(bytes)
+            ref (Xwt.Drawing.Image.FromStream(memoryStream))           
          | None ->
             if imageName.StartsWith("http:") || imageName.StartsWith("https:") 
             then

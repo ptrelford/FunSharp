@@ -5,6 +5,7 @@ open System.IO
 open System.Collections.Generic
 open Xwt.Drawing
 
+[<Sealed>]
 type ImageList private () =
    static let images = Dictionary<string,byte[]>()
    static member LoadImage(path:string) =
@@ -15,12 +16,9 @@ type ImageList private () =
          else Resource.LoadBytes path
       images.Add(name, bytes)
       name
-   static member internal TryGetImage(name:string) =
+   static member internal TryGetImageBytes(name:string) =
       match images.TryGetValue(name) with
-      | true, bytes ->         
-         use memoryStream = new MemoryStream(bytes)
-         let image = Image.FromStream(memoryStream)
-         Some(image)
+      | true, bytes -> Some(bytes)
       | false, _ -> None
 
 
