@@ -11,7 +11,9 @@ type Turtle private () =
    static let mutable _y = float GraphicsWindow.Height / 2.0
    static let mutable isPenDown = true
    static let show () =
-      if not userHidden then My.App.Canvas.Turtle.IsVisible <- true
+      if not userHidden then
+        My.App.Canvas.Turtle.IsVisible <- true
+        My.App.Canvas.Invalidate()
    static member Speed
       with get () = speed
       and set value = 
@@ -21,6 +23,7 @@ type Turtle private () =
       with get () = angle
       and set value = 
          angle <- value
+         My.App.Canvas.Turtle.Rotation <- Some angle
          show ()
    static member X
       with get () = _x
@@ -33,9 +36,7 @@ type Turtle private () =
          _y <- value
          show ()
    static member Turn(amount:float) =
-      angle <- angle + amount
-      My.App.Canvas.Turtle.Rotation <- Some angle
-      show ()
+      Turtle.Angle <- angle + amount
    static member Turn(amount:int) =
       Turtle.Turn(float amount)      
    static member TurnLeft() =
@@ -57,6 +58,7 @@ type Turtle private () =
    static member MoveTo(x:float,y:float) =
       _x <- x; _y <- y
       My.App.Canvas.Turtle.Offset <- Xwt.Point(_x,_y)
+      show()
    static member MoveTo(x:int, y:int) = 
       Turtle.MoveTo(float x, float y)
    static member PenUp() =
